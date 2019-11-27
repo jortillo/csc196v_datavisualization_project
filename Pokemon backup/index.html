@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="fullpage.css" />
+    <link rel="stylesheet" href="main.css">
+    
+</head>
+<body>
+    <div id="fullpage">
+        <div class="section" id="s1">
+            <h1 id="s1h1">Pokemon </h1>
+            <p id="s1p1">Exploring the <b>World</b> and <b>Success</b></p>
+            <p id="s1p2">Introduced to the world in the year <b>1996.</b> <br>
+                It grew to become one of the <b>biggest</b> franchise. <br>
+                
+            </p>
+        </div>
+        <div class="section" id="s2">
+            <p>Started as a game, released in 1996 by Game Freak, <br>
+                Spanning over 2 deacades, resulting in many video games, tv shows, card game, and etc.
+            <br>Pokemon became one of the most successful franchise in the world.</p>
+        </div>
+        <div class="section" id="s3">
+            <h1>Section 3</h1>
+        </div>
+    </div>
+    <script type="text/javascript" src="fullpage.js"></script>
+    <script type="text/javascript">
+        var myFullpage = new fullpage('#fullpage', {
+            anchors: ['firstPage', 'secondPage', '3rdPage'],
+            sectionsColor: ['#C63D0F', 'white', '#7E8F7C'],
+            autoScrolling: true,
+            navigation: true,
+            navigationTooltips: ['Introduction', 'section 2', 'Sources']
+            
+            
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+.section{
+    background-size: cover;
+}
+#s1{
+    background-image: url(images/bg1.jpg);
+}
+#s1h1{
+    color: white;
+    text-align: left;
+    font-family: 'Montserrat';
+    font-size: 4em;
+    margin-bottom: -1.5rem;
+    margin-left: 1rem;
+
+}
+#s1p1{
+    color: white;
+    text-align: left;
+    font-family: 'Montserrat';
+    margin-bottom: 2rem;
+    margin-left: 1.25rem;
+}
+
+#s1p2{
+    color: white;
+    text-align: left;
+    font-family: 'Montserrat';
+    margin-bottom: 45rem;
+    margin-left: 1.25rem;
+}
+
+#s2{
+    color: black;
+    margin-left: 1.25rem;
+    font-family: 'Montserrat';
+}
