@@ -13,6 +13,7 @@
   }
 
 
+  
 #s1h1{
     color: black;
     text-align: center;
@@ -31,6 +32,19 @@
     text-align: center;
     font-family: 'Montserrat';
     font-size: 4em;
+}
+
+#s3{
+    color: black;
+    text-align: center;
+    font-family: 'Montserrat';   
+}
+
+#s5{
+    color: black;
+    text-align: center;
+    font-family: 'Montserrat';
+    
 }
 
 #map{
