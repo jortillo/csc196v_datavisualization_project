@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,61 +8,64 @@
     <title>The Growth of the United States</title>
     <link rel="stylesheet" type="text/css" href="fullpage.css" />
     <link rel="stylesheet" href="main.css">
-    
+
 </head>
+
 <body>
-    
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="https://d3js.org/topojson.v2.min.js"></script>
+    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+
     <div id="fullpage">
         <div class="section" id="s1">
             <h1 id="s1h1">The Growth of the United States </h1>
             <p id="s1p1">An Exploritary Data Analysis of the US Population</p>
         </div>
-        <div class="section" id="s2">
-            <h1 id="s1h1">Population of the US by Year</h1>
-            <div style="text-align: center;"><img src="images/Sheet_1.png" alt="sheet_1" style="width:50%"></div>
+        <div class="section" id="s2" style="text-align: center;">
+            <h1>US Total Population Over Time</h1>
+            
         </div>
         <div class="section" id="s3">
-            <h1 id="s1h1">From reading the Line Chart. <br> The US Population in 2018 is about 327 Million.</h1>
+            <h1 id="s3h1">United States Population Choropleth Map Timeline</h1>
+            <div style="font-family: 'Montserrat';">
+                <form id="dimensions">
+                    <input type='radio' id="both" name="mode" onclick="updateData()" checked>Both</input>
+                    <input type='radio' id="male" name="mode" onclick="updateDataMale()">Male</input>
+                    <input type='radio' id="female" name="mode" onclick="updateDataFemale()">Female</input>
+                </form>
+            </div>
+            <div class="slidecontainer" style="font-family: 'Montserrat';">
+                <input type="range" min="2000" max="2018" value="2000" class="slider" id="slider" onchange="updateData()">
+                <p>Year:
+                    <span id="year"></span>
+                </p>
+            </div>
+            <svg id="map" viewBox="0 0 960 600"></svg>
         </div>
         <div class="section" id="s4" style="text-align: center;">
-                <h1 id="s2h1">United States Population Choropleth Map 2018</h1>
-                <div style="font-family: 'Montserrat';">
-                    <form id="dimensions">
-                        <input  type='radio' id="both" name="mode" onclick="updateData()" checked>Both</input>
-                        <input type='radio' id="male" name="mode"onclick="updateDataMale()">Male</input>
-                        <input type='radio' id="female" name="mode"onclick="updateDataFemale()">Female</input>
-                    </form>
-                </div>
-                <div class="slidecontainer"style="font-family: 'Montserrat';">
-                    <input type="range" min="2000" max="2018" value="2000" class="slider" id="slider" onchange="updateData()">
-                        <p>Year: 
-                            <span id="year"></span>
-                        </p>
-                    </div>
-                <div>
-                        <script src="https://d3js.org/d3.v5.min.js"></script>
-						<script src="https://d3js.org/d3.v4.min.js"></script>
-						<script src="https://d3js.org/topojson.v2.min.js"></script>
-						<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
-                        <svg id="map" viewBox="0 0 960 600"></svg>
-                    <script type="text/javascript" src="test.js"></script></div>
+                <object type="text/html" data="http://validator.w3.org/" width="800px" height="600px" style="overflow:auto;border:5px ridge blue">
+                </object>
         </div>
         <div class="section" id="s5">
-            <h1>California is the Most Populated State in the US</h1>
+            <h1>United States Diversity</h1>
+            
         </div>
     </div>
-    
+    <script type="text/javascript" src="World_Choro.js"></script>
+    <script type="text/javascript" src="US_Choro.js"></script>
+    <script src="US_TotalPopTime.js"></script>
     <script type="text/javascript" src="fullpage.js"></script>
     <script type="text/javascript">
         var myFullpage = new fullpage('#fullpage', {
-            anchors: ['firstPage', 'secondPage', '3rdPage', '4thPage', '5thPage'],
-            sectionsColor: ['white', 'white', 'white', 'white', 'white'],
+            anchors: ['firstPage', 'secondPage', '3rdPage', '4thPage', '5thPage', '6thPage'],
+            sectionsColor: ['white', 'white', 'white', 'white', 'white', 'white'],
             autoScrolling: true,
             navigation: true,
-            navigationTooltips: ['Introduction', 'section 2', 'section 3', 'section 4']
-            
-            
+            navigationTooltips: ['Introduction', 'section 2', 'section 3', 'section 4', 'section 5']
+
         });
     </script>
 </body>
+
 </html>
