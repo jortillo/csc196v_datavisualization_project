@@ -12,10 +12,11 @@
 </head>
 
 <body>
-    <script src="https://d3js.org/d3.v5.min.js"></script>
-    <script src="https://d3js.org/d3.v4.min.js"></script>
-    <script src="https://d3js.org/topojson.v2.min.js"></script>
-    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+        <script src="https://d3js.org/d3.v3.min.js"></script>
+        <script src="https://d3js.org/d3.v5.min.js"></script>
+        <script src="https://d3js.org/d3.v4.min.js"></script>
+        <script src="https://d3js.org/topojson.v2.min.js"></script>
+        <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
 
     <div id="fullpage">
         <div class="section" id="s1">
@@ -44,22 +45,36 @@
             <svg id="map" viewBox="0 0 960 600"></svg>
         </div>
         <div class="section" id="s4" style="text-align: center;">
-                <object type="text/html" data="http://validator.w3.org/" width="800px" height="600px" style="overflow:auto;border:5px ridge blue">
+                <object type="text/html" data="https://jortillo.github.io/worldmap.html" width="960px" height="600px" style="overflow:auto;border:5px ridge black">
                 </object>
         </div>
         <div class="section" id="s5">
             <h1>United States Diversity</h1>
-            
+            <div class="slidecontainer" style="font-family: 'Montserrat';">
+                
+                    <input type="range" min="2000" max="2018" value="2000" class="sliderPie" id="sliderPie" onchange="updateRaceChart()">
+                    <p>Year: 
+                        <span id="yearPie"></span>
+                    </p>
+                </div>
+            <div id="s5-chart">
+            <svg id="chart" width="960px" height="600px"></svg>
+        </div>
+        </div>
+        <div class="section" id="s6">
+
         </div>
     </div>
+    <script type="text/javascript" src="US_Projection.js"></script>
+    <script type="text/javascript" src="US_PieRace.js"></script>
     <script type="text/javascript" src="World_Choro.js"></script>
     <script type="text/javascript" src="US_Choro.js"></script>
-    <script src="US_TotalPopTime.js"></script>
+    <script type="text/javascript" src="US_TotalPopTime.js"></script>
     <script type="text/javascript" src="fullpage.js"></script>
     <script type="text/javascript">
         var myFullpage = new fullpage('#fullpage', {
             anchors: ['firstPage', 'secondPage', '3rdPage', '4thPage', '5thPage', '6thPage'],
-            sectionsColor: ['white', 'white', 'white', 'white', 'white', 'white'],
+            sectionsColor: ['lightgray', 'lightgray', 'lightgray', 'lightgray', 'lightgray', 'lightgray'],
             autoScrolling: true,
             navigation: true,
             navigationTooltips: ['Introduction', 'section 2', 'section 3', 'section 4', 'section 5']
