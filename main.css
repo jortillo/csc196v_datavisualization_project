@@ -100,6 +100,10 @@
     height: 75%;
     width: 75%;
 }
+#map2{
+    height: 100%;
+    width: 100%;
+}
 
 #test{
     height: 100%;
@@ -158,3 +162,16 @@
   rect {
     stroke-width: 2;
   }
+
+.focus circle {
+    fill: steelblue;
+}
+
+.focus text {
+    font-size: 14px;
+}
+
+.tooltip {
+    fill: white;
+    stroke: #000;
+}

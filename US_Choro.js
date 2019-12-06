@@ -1,13 +1,80 @@
 // slider
 var slider = document.getElementById("slider");
 var output = document.getElementById("year");
+var outputPop = document.getElementById("totalpop");
+var pop = 282171957;
+outputPop.innerHTML = pop;
 output.innerHTML = slider.value; // Display the default slider value
 
 // Update the current slider value (each time you drag the slider handle)
 slider.oninput = function() {
     output.innerHTML = this.value;
     updateData()
+    updateTotalPop()
+    outputPop.innerHTML = pop;
 }
+
+
+function updateTotalPop(){
+    if (output.innerHTML == 2000){
+        pop = 282171957;
+    }
+    else if(output.innerHTML == 2001){
+        pop = 285081556;
+    }
+    else if(output.innerHTML == 2002){
+        pop = 287803914;
+    }
+    else if(output.innerHTML == 2003){
+        pop = 290326418;
+    }
+    else if(output.innerHTML == 2004){
+        pop = 293045739;
+    }
+    else if(output.innerHTML == 2005){
+        pop = 295753151;
+    }
+    else if(output.innerHTML == 2006){
+        pop = 298593212;
+    }
+    else if(output.innerHTML == 2007){
+        pop = 301579895;
+    }
+    else if(output.innerHTML == 2008){
+        pop = 304374846;
+    }
+    else if(output.innerHTML == 2009){
+        pop = 307006550;
+    }
+    else if(output.innerHTML == 2010){
+        pop = 309326085;
+    }
+    else if(output.innerHTML == 2011){
+        pop = 311580009;
+    }
+    else if(output.innerHTML == 2012){
+        pop = 313874218;
+    }
+    else if(output.innerHTML == 2013){
+        pop = 316057727;
+    }
+    else if(output.innerHTML == 2014){
+        pop = 318386421;
+    }
+    else if(output.innerHTML == 2015){
+        pop = 320742673;
+    }
+    else if(output.innerHTML == 2016){
+        pop = 323071342;
+    }
+    else if(output.innerHTML == 2017){
+        pop = 325147121;
+    }
+    else if(output.innerHTML == 2018){
+        pop = 325147121;
+    }
+}
+
 var inputValue = null;
 
 //map
