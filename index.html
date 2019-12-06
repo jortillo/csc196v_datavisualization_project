@@ -23,10 +23,19 @@
             <h1 id="s1h1">The Growth of the United States </h1>
             <p id="s1p1">An Exploritary Data Analysis of the US Population by Jeric Ortillo</p>
         </div>
+        <div class="section" id="spara">
+<p>test</p>
+        </div>
         <div class="section" id="s2" style="text-align: center;">
-            <h1>US Total Population Over Time</h1>
+            <h1>US Total Population Over Time (2000-2018)</h1>
             
         </div>
+        <div class="section" id="spara">
+                <p>In the year 2000, the United States Population was around 280 million. <br>
+                    The population steadily grew to about 327 million in the year 2018. <br>
+                    The United States population has grew about 47 million since the past 2 decades!
+                </p>
+            </div>
         <div class="section" id="s3">
             <h1 id="s3h1">United States Population Choropleth Map Timeline</h1>
             <div style="font-family: 'Montserrat';">
@@ -47,12 +56,25 @@
             </div>
             <svg id="map" viewBox="0 0 960 600"></svg>
         </div>
+        <div class="section" id="spara">
+            <p>From looking at the choropleth map, California has stayed the #1 most populated state, going from about 34 million to 39 million.
+                <br>Texas stayed the #2 most populated state and New York stayed at #3 through the past 2 decades.
+                <br>From looking at the choropleth map over time, we see usually that the more populated states grew signifcantly while the least populated states barely grew.
+                <br>From 2000 to 2018, California grew about 5 million, Texas grew about 8 million, and Florida grew about 5 million, <br>
+                while the least populated states such as Alaska grew about 100 thousand, Vermont grew about 20 thousand and etc.
+            </p>
+        </div>
         <div class="section" id="s4" style="text-align: center;">
                 <object type="text/html" data="https://jortillo.github.io/worldmap.html" width="960px" height="700px" style="overflow:auto;border:5px ridge black">
                 </object>
         </div>
+        <div class="section" id="spara">
+                <p>Comparing the United States to other countries in the world. In the year 2018, we see that the United States is the 3rd most populated country,
+                    <br>falling behind China and India and coming after Indonesia and Pakistan.
+                </p>
+            </div>
         <div class="section" id="s5">
-            <h1>United States Diversity</h1>
+            <h1>United States Population by Race (2000-2018)</h1>
             <div class="slidecontainer" style="font-family: 'Montserrat';">
                 
                     <input type="range" min="2000" max="2018" value="2000" class="sliderPie" id="sliderPie" onchange="updateRaceChart()">
@@ -64,10 +86,37 @@
             <svg id="chart" width="960px" height="600px"></svg>
         </div>
         </div>
+        <div class="section" id="spara">
+                <p>
+                From looking at the pie chart, it seems like the population is mostly white dominant. <br>
+                However, it seems like as time goes on, it seems like the population becomes less white dominant, 
+                <br> as other races grow in population and the United States become more diverse.
+                </p>
+            </div>
+            <div class="section" id="spara">
+                    <p>
+                    Not that we look through the United States population over time, let's see how the population will grow in the future.
+                    </p>
+                </div>
         <div class="section" id="s6">
-
+<h1>United States Population Projection till 2060</h1>
         </div>
+        <div class="section" id="spara">
+                <p>
+                From looking at the projection, its seems like the United States is steadily growing about 10 million every 10 years. <br>
+                When the year 2060 reaches, the United States population is projected to be around 400 million, which is about a 70 million increase since 2018!
+                </p>
+            </div>
+            <div class="section" id="spara">
+                    <h1>Data Sources:</h1>
+                    <p><a href="https://www.census.gov/">United States Census Bureau</a></p>
+                    <h1>Tools Used:</h1>
+                    <p>- d3.js
+                        <br>- fullpage.js
+                    </p>
+                </div>
     </div>
+    
     <script type="text/javascript" src="US_Projection.js"></script>
     <script type="text/javascript" src="US_PieRace.js"></script>
     <script type="text/javascript" src="World_Choro.js"></script>
@@ -77,7 +126,8 @@
     <script type="text/javascript">
         var myFullpage = new fullpage('#fullpage', {
             anchors: ['firstPage', 'secondPage', '3rdPage', '4thPage', '5thPage', '6thPage'],
-            sectionsColor: ['lightgray', 'lightgray', 'lightgray', 'lightgray', 'lightgray', 'lightgray'],
+            sectionsColor: ['lightgray', 'lightgray', 'lightgray', 'lightgray', 'lightgray', 'lightgray','lightgray','lightgray','lightgray','lightgray',
+            'lightgray','lightgray','lightgray','lightgray'],
             autoScrolling: true,
             navigation: true,
             navigationTooltips: ['Introduction', 'section 2', 'section 3', 'section 4', 'section 5']

@@ -71,7 +71,7 @@ function updateTotalPop(){
         pop = 325147121;
     }
     else if(output.innerHTML == 2018){
-        pop = 325147121;
+        pop = 327167434;
     }
 }
 
