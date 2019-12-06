@@ -2,7 +2,7 @@ var margin = {top: 0, right: 0, bottom: 0, left: 0},
             width = 960 - margin.left - margin.right,
             height = 600 - margin.top - margin.bottom;
 
-var world_map = d3.select("#test")
+var world_map = d3.select("#worldmap")
             .append("svg")
             .attr("width", width)
             .attr("height", height)

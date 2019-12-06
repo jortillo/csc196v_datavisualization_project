@@ -6,6 +6,7 @@ output.innerHTML = slider.value; // Display the default slider value
 // Update the current slider value (each time you drag the slider handle)
 slider.oninput = function() {
     output.innerHTML = this.value;
+    updateData()
 }
 var inputValue = null;
 
@@ -97,6 +98,7 @@ function ready(error, us, pop) {
 }
 
 function updateData() {
+    us_map.exit()
     if(document.getElementById("male").checked == true) {
     updateDataMale()
     }
