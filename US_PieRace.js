@@ -113,7 +113,17 @@
         function updateRaceChart() {
             
             donutChart.remove().exit()
-            var race = d3.csv('racePop.csv', function(error, dataset) {
+            var file;
+            if(document.getElementById("bothHis").checked == true){
+                file = "racePop.csv";
+            }
+            else if(document.getElementById("His").checked == true){
+                file = "Hispanic-racePop.csv";
+            }
+            else if(document.getElementById("NonHis").checked == true){
+                file = "NonHispanic-racePop.csv";
+            }
+            d3.csv(file, function(error, dataset) {
                 dataset.forEach(function(d) {
                     if (outputPie.innerHTML == "2000") {
                         d.Population = +d.pop2000;
