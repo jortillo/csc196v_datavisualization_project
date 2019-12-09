@@ -162,6 +162,7 @@ US_Projection.append("text")
       "translate(" + (width/2) + " ," + 
                      (height + margin.top + 20) + ")")
 .style("text-anchor", "middle")
+.attr("id", "linetest")
 .text("Year");
 
 // text label for the y axis
@@ -171,6 +172,7 @@ US_Projection.append("text")
 .attr("x",0 - (height / 2))
 .attr("dy", "1em")
 .style("text-anchor", "middle")
+.attr("id", "linetest")
 .text("Population");      
 
 });
