@@ -147,6 +147,7 @@ d3.csv("US_PopProjection2019-2060.csv", function(error, data) {
   // Add the X Axis
   US_Projection.append("g")
       .attr("transform", "translate(0," + height + ")")
+      .attr("id", "linetest")
       .call(d3.axisBottom(x).tickFormat(d3.format(".0f")));
       
   // Add the Y Axis
